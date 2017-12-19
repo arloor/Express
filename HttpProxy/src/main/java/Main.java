@@ -13,7 +13,7 @@ import java.util.concurrent.Executors;
 
 public class Main {
     public static void main(String[] args) {
-        ExecutorService executor= Executors.newFixedThreadPool(20);
+        ExecutorService executor= Executors.newFixedThreadPool(100);
         try(ServerSocket ss=new ServerSocket(2222)) {
 
             while(true){

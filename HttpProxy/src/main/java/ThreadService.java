@@ -1,5 +1,8 @@
 import java.io.*;
+import java.lang.reflect.Array;
 import java.net.*;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.concurrent.Callable;
@@ -7,7 +10,7 @@ import java.util.concurrent.Callable;
 public class ThreadService implements Callable<Void>{
     Socket localSocket;
     BufferedReader localSocketBufferReader = null;
-    BufferedWriter localSocketBufferWriter=null;
+    OutputStream localOutputStream=null;
 
     public ThreadService(Socket localSocket) {
         this.localSocket = localSocket;
@@ -16,8 +19,8 @@ public class ThreadService implements Callable<Void>{
     @Override
     public Void call() {
         List<String> requestBody= getRequstFromLocal();
-        String responseBody=sendRequest2RemoteThenGetResponse(requestBody);
-        sendResponse2Local(responseBody);
+        byte[] response=sendRequest2RemoteThenGetResponse(requestBody);
+        sendResponse2Local(response);
 
         //关闭localSocket相关的writer、reader和socket本身。
         if(localSocketBufferReader!=null){
@@ -36,7 +39,22 @@ public class ThreadService implements Callable<Void>{
                 }
             }
         }
-//todo:删除
+        if(localOutputStream!=null){
+            try {
+                localOutputStream.close();
+                localOutputStream=null;
+            } catch (IOException e) {
+                e.printStackTrace();
+            }finally {
+                if(localOutputStream!=null){
+                    try {
+                        localOutputStream.close();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        }
         try {
             localSocket.close();
         } catch (IOException e) {
@@ -45,14 +63,15 @@ public class ThreadService implements Callable<Void>{
         return null;
     }
 
-    private void sendResponse2Local(String responseBody) {
+    private void sendResponse2Local(byte[] response) {
         try {
-            localSocketBufferWriter=new BufferedWriter(new OutputStreamWriter(localSocket.getOutputStream()));
-            localSocketBufferWriter.write(responseBody);
-            localSocketBufferWriter.flush();
+            System.out.println("向本地写结果");
+            localOutputStream=localSocket.getOutputStream();
+            localOutputStream.write(response);
         } catch (IOException e) {
             e.printStackTrace();
         }
+
     }
 
     /**
@@ -112,7 +131,7 @@ public class ThreadService implements Callable<Void>{
      * @param requestBody
      * @return
      */
-    private String sendRequest2RemoteThenGetResponse(List<String> requestBody){
+    private byte[] sendRequest2RemoteThenGetResponse(List<String> requestBody){
 
         System.out.println("向远程服务器发送请求");
         String host=null;
@@ -134,8 +153,10 @@ public class ThreadService implements Callable<Void>{
         }
         System.out.println(host+":"+port);
         if(host!=null){
+            //下面两个是需要关闭的资源
             BufferedWriter remoteSocketBufferedWriter=null;
-            BufferedReader remoteSocketBufferedReader=null;
+            InputStream remoteSocketInputStream=null;
+
             Socket remoteSocket=null;
             try {
                 InetAddress address=InetAddress.getByName(host);
@@ -151,45 +172,43 @@ public class ThreadService implements Callable<Void>{
                 remoteSocketBufferedWriter.write(requset);
                 remoteSocketBufferedWriter.flush();
 
-
-                remoteSocketBufferedReader=new BufferedReader(new InputStreamReader(remoteSocket.getInputStream()));
-                String read=null;
-                int contentLength=0;
-                StringBuffer strBuff=new StringBuffer();
-                while(!(read=remoteSocketBufferedReader.readLine()).equals("")){
-                   strBuff.append(read+"\r\n");
-                    if(read.startsWith("Content-Length:")){
-                        String contentlenStr=read.split(" ")[1];
-                        contentLength=Integer.parseInt(contentlenStr);
+                remoteSocketInputStream=remoteSocket.getInputStream();
+                List<Byte> byteList=new ArrayList<>();
+                byte[] buff=new byte[3555];
+                int numRead=0;
+                while((numRead=remoteSocketInputStream.read(buff))!=-1){
+                    for (int i = 0; i < numRead; i++) {
+                        byteList.add(buff[i]);
                     }
-
                 }
-                strBuff.append("\r\n");
-                char[] buff=new char[contentLength];
-                remoteSocketBufferedReader.read(buff);
+                byte[] result=new byte[byteList.size()];
+                for (int i = 0; i < result.length; i++) {
+                    result[i]=byteList.get(i);
+                }
 
-                strBuff.append(new String(buff));
-                System.out.println(strBuff.toString());
+
+
+                System.out.println(new String(result));
                 System.out.println("读取响应完毕");
-                remoteSocketBufferedReader.close();
-                remoteSocketBufferedReader=null;
+                remoteSocketInputStream.close();
+                remoteSocketInputStream=null;
                 remoteSocketBufferedWriter.close();
                 remoteSocketBufferedWriter=null;
                 remoteSocket.close();
                 remoteSocket=null;
-                return strBuff.toString();
+                return result;
             } catch (UnknownHostException e) {
                 e.printStackTrace();
             } catch (IOException e) {
                 e.printStackTrace();
-            }finally {
-               if(remoteSocketBufferedReader!=null){
-                   try {
-                       remoteSocketBufferedReader.close();
-                   } catch (IOException e) {
-                       e.printStackTrace();
-                   }
-               }
+            } finally {
+                if(remoteSocketInputStream!=null){
+                    try {
+                        remoteSocketInputStream.close();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
                 if(remoteSocketBufferedWriter!=null){
                     try {
                         remoteSocketBufferedWriter.close();
