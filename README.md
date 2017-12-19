@@ -19,4 +19,4 @@
 然后创建一个线程，使用特定的方法（需要学习）循环检测这些socket的远程端是否关闭。关闭则从map中删除本地和remote socket。  
 这样需要修改main的实现为使用select+多线程。   
 就是：将map中的所有本地浏览器socket和代理的serverSocket注册到select中。serversocket就绪就accept。其他socket就绪就执行Thread来读取请求并发送请求。
-另外select所有的remote socket来传递远程的相应。
+另外select所有的remote socket来传递远程的响应。
