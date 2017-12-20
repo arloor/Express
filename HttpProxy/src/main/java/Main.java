@@ -22,7 +22,6 @@ public class Main {
                 //开启service线程
                 ThreadService serviceThread=new ThreadService(localSocket);
                executor.submit(serviceThread);
-//                serviceThread.call();
             }
         } catch (IOException e) {
             e.printStackTrace();
