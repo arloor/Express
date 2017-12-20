@@ -103,7 +103,7 @@ public class ThreadService implements Callable<Void>{
             //使用BufferedReader获取line并且在line最后加上\r\n（read到的line是没有的需要自己加上）
             String line=null;
             int contentLength=0;
-            while(!(line= localSocketBufferReader.readLine()).equals("")){//知道读到一个空行
+            while((line= localSocketBufferReader.readLine())!=null&&!line.equals("")){//知道读到一个空行
                 if(line.startsWith("Content-Length:")){
                     String contentlenStr=line.split(" ")[1];
                     contentLength=Integer.parseInt(contentlenStr);
