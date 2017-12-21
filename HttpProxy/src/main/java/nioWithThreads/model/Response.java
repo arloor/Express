@@ -1,5 +1,5 @@
-import java.net.MalformedURLException;
-import java.net.URL;
+package nioWithThreads.model;
+
 import java.util.LinkedList;
 import java.util.List;
 

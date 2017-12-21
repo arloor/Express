@@ -1,3 +1,5 @@
+package nioWithThreads.model;
+
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.LinkedList;
@@ -87,7 +89,7 @@ public class Request {
 
     public String getHeader(String key){
         for (Header header:headers
-             ) {
+                ) {
             if(header.getKey().equals(key)){
                 return header.getValue();
             }
@@ -114,10 +116,11 @@ public class Request {
     @Override
     public String toString() {
         StringBuilder builder=new StringBuilder();
-        builder.append("向"+host+"发送的请求如下:body部分可能乱码，是正常现象");
-        builder.append("=============================");
+        builder.append("向"+host+"发送的请求如下:body部分可能乱码，是正常现象\t\n");
+        builder.append("=============================\r\n");
+        builder.append(requestLine+"\r\n");
         for (Header header:headers
-             ) {
+                ) {
             builder.append(header.getKey());
             builder.append(": ");
             builder.append(header.getValue());
