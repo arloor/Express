@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="HttpProxy:jar">
+    <output-path>$PROJECT_DIR$/HttpProxy/target</output-path>
+    <root id="archive" name="HttpProxy.jar">
+      <element id="module-output" name="HttpProxy" />
+    </root>
+  </artifact>
+</component>

@@ -1,9 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="HttpProxy:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="d93808c7-10e1-440f-bc7f-0badf74ce03b" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/HttpProxy/src/main/java/Main.java" afterPath="$PROJECT_DIR$/HttpProxy/src/main/java/Main.java" />
-      <change beforePath="$PROJECT_DIR$/HttpProxy/src/main/java/ThreadService.java" afterPath="$PROJECT_DIR$/HttpProxy/src/main/java/ThreadService.java" />
+    <list default="true" id="d93808c7-10e1-440f-bc7f-0badf74ce03b" name="Default" comment="修改readme，增加问题一的解决思路">
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/HttpProxy_jar.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/HttpProxy/src/main/java/nioWithThreads/RunnableDestroy.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/HttpProxy/src/main/resources/META-INF/MANIFEST.MF" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/newProxy/Untitled.mdj" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/newProxy/classes.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/newProxy/newProxy.iml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/newProxy/src/Acceptor.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/newProxy/src/Bootstrap.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/newProxy/src/ChannelPairs.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/newProxy/src/MyLoggerUtil.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/newProxy/src/TestUrl.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/newProxy/src/Worker.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/newProxy/顺序图.png" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/HttpProxy/src/main/java/nioWithThreads/ChannelUtils.java" afterPath="$PROJECT_DIR$/HttpProxy/src/main/java/nioWithThreads/ChannelUtils.java" />
+      <change beforePath="$PROJECT_DIR$/HttpProxy/src/main/java/nioWithThreads/Main.java" afterPath="$PROJECT_DIR$/HttpProxy/src/main/java/nioWithThreads/Main.java" />
+      <change beforePath="$PROJECT_DIR$/HttpProxy/src/main/java/nioWithThreads/ProxyTools.java" afterPath="$PROJECT_DIR$/HttpProxy/src/main/java/nioWithThreads/ProxyTools.java" />
+      <change beforePath="$PROJECT_DIR$/HttpProxy/src/main/java/nioWithThreads/RunnableDoClientRequest.java" afterPath="$PROJECT_DIR$/HttpProxy/src/main/java/nioWithThreads/RunnableDoClientRequest.java" />
+      <change beforePath="$PROJECT_DIR$/HttpProxy/src/main/java/nioWithThreads/RunnableDoServerResponse.java" afterPath="$PROJECT_DIR$/HttpProxy/src/main/java/nioWithThreads/RunnableDoServerResponse.java" />
+      <change beforePath="$PROJECT_DIR$/HttpProxy/src/main/java/nioWithThreads/ThreadDestroy.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/HttpProxy/target/classes/Main.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/HttpProxy/target/classes/ThreadService.class" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/HttpProxy/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,60 +45,76 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HttpProxy/src/main/java/Main.java">
+      <file leaf-file-name="Acceptor.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/newProxy/src/Acceptor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="24" column="15" lean-forward="true" selection-start-line="24" selection-start-column="15" selection-end-line="24" selection-end-column="15" />
-              <folding />
+            <state relative-caret-position="1787">
+              <caret line="78" column="33" lean-forward="false" selection-start-line="78" selection-start-column="33" selection-end-line="78" selection-end-column="33" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1652#1653#0" expanded="true" />
+                <element signature="e#1693#1694#0" expanded="true" />
+                <element signature="e#1743#1744#0" expanded="true" />
+                <element signature="e#1781#1782#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ThreadService.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/HttpProxy/src/main/java/ThreadService.java">
+      <file leaf-file-name="Bootstrap.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/newProxy/src/Bootstrap.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="105" column="23" lean-forward="false" selection-start-line="105" selection-start-column="23" selection-end-line="105" selection-end-column="23" />
-              <folding />
+            <state relative-caret-position="-413">
+              <caret line="13" column="24" lean-forward="false" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HttpProxy/src/test/java/test.java">
+      <file leaf-file-name="ChannelPairs.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/newProxy/src/ChannelPairs.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="13" lean-forward="false" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
-              <folding />
+            <state relative-caret-position="287">
+              <caret line="48" column="57" lean-forward="false" selection-start-line="48" selection-start-column="57" selection-end-line="48" selection-end-column="57" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="300">
-                <caret line="12" column="23" lean-forward="false" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
-                <folding />
-              </first_editor>
-              <second_editor />
+      <file leaf-file-name="Worker.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/newProxy/src/Worker.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="124">
+              <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HttpProxy/pom.xml">
+      <file leaf-file-name="TestUrl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/newProxy/src/TestUrl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="16" column="10" lean-forward="false" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
+            <state relative-caret-position="450">
+              <caret line="18" column="26" lean-forward="false" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -93,6 +136,22 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/HttpProxy/src/main/java/ThreadService.java" />
         <option value="$PROJECT_DIR$/HttpProxy/src/main/java/Main.java" />
+        <option value="$PROJECT_DIR$/HttpProxy/src/main/java/Proxy.java" />
+        <option value="$PROJECT_DIR$/HttpProxy/src/main/java/nioWithThreads/ChannelUtils.java" />
+        <option value="$PROJECT_DIR$/HttpProxy/src/main/java/nioWithThreads/ThreadDestroy.java" />
+        <option value="$PROJECT_DIR$/HttpProxy/src/main/java/nioWithThreads/Main.java" />
+        <option value="$PROJECT_DIR$/HttpProxy/src/main/java/nioWithThreads/RunnableDoClientRequest.java" />
+        <option value="$PROJECT_DIR$/HttpProxy/src/main/java/nioWithThreads/RunnableDoServerResponse.java" />
+        <option value="$PROJECT_DIR$/HttpProxy/src/main/java/nioWithThreads/RunnableDestroy.java" />
+        <option value="$PROJECT_DIR$/HttpProxy/src/main/java/nioWithThreads/ProxyTools.java" />
+        <option value="$PROJECT_DIR$/newProxy/src/a.java" />
+        <option value="$PROJECT_DIR$/newProxy/src/Dispatcher.java" />
+        <option value="$PROJECT_DIR$/newProxy/src/ChannelPair.java" />
+        <option value="$PROJECT_DIR$/newProxy/src/ChannelPairs.java" />
+        <option value="$PROJECT_DIR$/newProxy/src/TestUrl.java" />
+        <option value="$PROJECT_DIR$/newProxy/src/Acceptor.java" />
+        <option value="$PROJECT_DIR$/newProxy/src/Worker.java" />
+        <option value="$PROJECT_DIR$/newProxy/src/Bootstrap.java" />
       </list>
     </option>
   </component>
@@ -110,15 +169,14 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="260" />
-    <option name="y" value="20" />
-    <option name="width" value="1400" />
-    <option name="height" value="1000" />
+    <option name="x" value="-7" />
+    <option name="width" value="974" />
+    <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
-      <flattenPackages />
+      <flattenPackages ProjectPane="false" />
       <showMembers />
       <showModules />
       <showLibraryContents />
@@ -131,7 +189,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -157,21 +218,44 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Express" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HttpProxy" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="nioWithThreads" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Express" type="b2602c69:ProjectViewProjectNode" />
+              <item name="newProxy" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Express" type="b2602c69:ProjectViewProjectNode" />
+              <item name="newProxy" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/web-example" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\IdeaProjects\Express\newProxy" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -185,13 +269,27 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Bootstrap">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
       <option name="HEIGHT" value="300" />
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <module />
+    </configuration>
+    <configuration name="Bootstrap" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="Bootstrap" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="newProxy" />
+      <envs />
     </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
@@ -205,6 +303,53 @@
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="HttpProxy" />
+      <envs />
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="nioWithThreads.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="nioWithThreads.Main" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="HttpProxy" />
+      <envs />
+    </configuration>
+    <configuration name="Proxy" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="Proxy" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="2222" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="HttpProxy" />
+      <envs />
+    </configuration>
+    <configuration name="TestUrl" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="TestUrl" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="newProxy" />
       <envs />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -240,6 +385,11 @@
       </option>
       <envs />
       <patterns />
+    </configuration>
+    <configuration name="HttpProxy.jar" type="JarApplication" factoryName="JAR Application" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="JAR_PATH" value="$PROJECT_DIR$/HttpProxy/target/HttpProxy.jar" />
+      <envs />
     </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
@@ -281,10 +431,20 @@
       <option name="PROGRAM_PARAMETERS" />
       <predefined_log_file id="idea.log" enabled="true" />
     </configuration>
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="Application.Main" />
+      <item index="1" class="java.lang.String" itemvalue="Application.Proxy" />
+      <item index="2" class="java.lang.String" itemvalue="JAR Application.HttpProxy.jar" />
+      <item index="3" class="java.lang.String" itemvalue="Application.Bootstrap" />
+      <item index="4" class="java.lang.String" itemvalue="Application.TestUrl" />
+    </list>
     <recent_temporary>
-      <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="Application.Main" />
-        <item index="1" class="java.lang.String" itemvalue="Application.Main" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Application.Bootstrap" />
+        <item index="1" class="java.lang.String" itemvalue="Application.TestUrl" />
+        <item index="2" class="java.lang.String" itemvalue="JAR Application.HttpProxy.jar" />
+        <item index="3" class="java.lang.String" itemvalue="Application.Proxy" />
+        <item index="4" class="java.lang.String" itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -304,6 +464,19 @@
       <workItem from="1513667686098" duration="673000" />
       <workItem from="1513668412870" duration="7563000" />
       <workItem from="1513743728639" duration="932000" />
+      <workItem from="1513768400198" duration="588000" />
+      <workItem from="1513856604007" duration="4959000" />
+      <workItem from="1513862867024" duration="92000" />
+      <workItem from="1513863047235" duration="1302000" />
+      <workItem from="1513866429193" duration="19000" />
+      <workItem from="1513866771447" duration="3682000" />
+      <workItem from="1516106521682" duration="23000" />
+      <workItem from="1516108333541" duration="619000" />
+      <workItem from="1516109266273" duration="201000" />
+      <workItem from="1516109545915" duration="603000" />
+      <workItem from="1516114365435" duration="89000" />
+      <workItem from="1516155173471" duration="15480000" />
+      <workItem from="1516263842977" duration="5359000" />
     </task>
     <task id="LOCAL-00001" summary="解决了gzip的问题">
       <created>1513672091383</created>
@@ -337,7 +510,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9168000" />
+    <option name="totallyTimeSpent" value="42184000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -351,24 +524,24 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.611236" sideWeight="0.50214595" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921347" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.611236" sideWeight="0.49785408" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32921347" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38539326" sideWeight="0.49785408" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32884398" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25375536" sideWeight="0.49331105" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20976394" sideWeight="0.49331105" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25375536" sideWeight="0.50668895" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.50964814" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921347" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -410,23 +583,61 @@
     <option name="LAST_COMMIT_MESSAGE" value="修改readme，增加问题一的解决思路" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/newProxy/src/Worker.java</url>
+          <line>44</line>
+          <properties />
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/newProxy/src/Worker.java</url>
+          <line>37</line>
+          <properties />
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+      </breakpoints>
+      <breakpoints-defaults>
+        <breakpoint suspend="THREAD" type="java-line" />
+      </breakpoints-defaults>
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+      <option name="time" value="26" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/HttpProxy/src/main/java/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
-          <caret line="31" column="1" lean-forward="false" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/HttpProxy/src/main/java/ThreadService.java" />
+    <entry file="file://$PROJECT_DIR$/HttpProxy/src/main/java/Proxy.java" />
+    <entry file="file://$PROJECT_DIR$/HttpProxy/src/main/java/Request.java" />
+    <entry file="file://$PROJECT_DIR$/HttpProxy/src/main/java/Response.java" />
+    <entry file="file://$PROJECT_DIR$/HttpProxy/src/main/java/ChanelAndBuff.java" />
+    <entry file="file://$PROJECT_DIR$/HttpProxy/src/main/java/Header.java" />
     <entry file="file://$PROJECT_DIR$/HttpProxy/src/test/java/test.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="13" lean-forward="false" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HttpProxy/src/main/java/Tunnel.java" />
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="300">
+            <caret line="12" column="23" lean-forward="false" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HttpProxy/src/main/java/Main.java" />
+    <entry file="file://$PROJECT_DIR$/HttpProxy/src/test/java/test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="13" lean-forward="false" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -435,7 +646,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="300">
             <caret line="12" column="23" lean-forward="false" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -449,22 +659,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HttpProxy/src/main/java/ThreadService.java">
+    <entry file="file://$PROJECT_DIR$/HttpProxy/src/main/java/ThreadService.java" />
+    <entry file="file://$PROJECT_DIR$/HttpProxy/src/main/java/Main.java" />
+    <entry file="file://$PROJECT_DIR$/HttpProxy/src/test/java/test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1725">
-          <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="13" lean-forward="false" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="300">
+            <caret line="12" column="23" lean-forward="false" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HttpProxy/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="16" column="10" lean-forward="false" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HttpProxy/src/main/java/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/HttpProxy/src/main/java/ThreadService.java" />
+    <entry file="file://$PROJECT_DIR$/HttpProxy/src/main/java/Main.java" />
     <entry file="file://$PROJECT_DIR$/HttpProxy/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -481,38 +704,182 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HttpProxy/src/test/java/test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="13" lean-forward="false" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="300">
             <caret line="12" column="23" lean-forward="false" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HttpProxy/src/main/java/Main.java">
+    <entry file="file://$PROJECT_DIR$/HttpProxy/src/main/java/ChanelAndBuff.java" />
+    <entry file="file://$PROJECT_DIR$/HttpProxy/src/main/java/Header.java" />
+    <entry file="file://$PROJECT_DIR$/HttpProxy/src/main/java/Main.java" />
+    <entry file="file://$PROJECT_DIR$/HttpProxy/src/main/java/Proxy.java" />
+    <entry file="file://$PROJECT_DIR$/HttpProxy/src/main/java/Request.java" />
+    <entry file="file://$PROJECT_DIR$/HttpProxy/src/main/java/Response.java" />
+    <entry file="file://$PROJECT_DIR$/HttpProxy/src/main/java/ThreadService.java" />
+    <entry file="file://$PROJECT_DIR$/HttpProxy/src/main/java/Tunnel.java" />
+    <entry file="file://$PROJECT_DIR$/HttpProxy/src/test/java/test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="24" column="15" lean-forward="true" selection-start-line="24" selection-start-column="15" selection-end-line="24" selection-end-column="15" />
+        <state relative-caret-position="0">
+          <caret line="0" column="13" lean-forward="false" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Java/jdk-9.0.1/lib/src.zip!/java.base/java/lang/Thread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1567">
+          <caret line="843" column="0" lean-forward="false" selection-start-line="843" selection-start-column="0" selection-end-line="843" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Java/jdk-9.0.1/lib/src.zip!/java.base/java/nio/channels/SocketChannel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2275">
+          <caret line="120" column="22" lean-forward="false" selection-start-line="120" selection-start-column="22" selection-end-line="120" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HttpProxy/src/main/java/ThreadService.java">
+    <entry file="file://$PROJECT_DIR$/HttpProxy/src/main/java/nioWithThreads/RunnableDoServerResponse.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="105" column="23" lean-forward="false" selection-start-line="105" selection-start-column="23" selection-end-line="105" selection-end-column="23" />
+        <state relative-caret-position="875">
+          <caret line="41" column="22" lean-forward="false" selection-start-line="41" selection-start-column="22" selection-end-line="41" selection-end-column="22" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HttpProxy/src/main/java/nioWithThreads/RunnableDestroy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HttpProxy/src/main/java/nioWithThreads/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="21" column="30" lean-forward="false" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HttpProxy/src/main/java/nioWithThreads/RunnableAccept.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="700">
+          <caret line="35" column="27" lean-forward="false" selection-start-line="35" selection-start-column="27" selection-end-line="35" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/newProxy/src/Dispatcher.java" />
+    <entry file="file://$PROJECT_DIR$/newProxy/src/ChannelPair.java" />
+    <entry file="file://$PROJECT_DIR$/HttpProxy/src/main/java/nioWithThreads/ProxyTools.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="12" column="48" lean-forward="false" selection-start-line="12" selection-start-column="48" selection-end-line="12" selection-end-column="48" />
+          <folding>
+            <element signature="e#1296#1297#0" expanded="false" />
+            <element signature="e#1348#1349#0" expanded="false" />
+            <element signature="e#1416#1417#0" expanded="false" />
+            <element signature="e#1471#1472#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HttpProxy/src/main/java/nioWithThreads/ChannelUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2125">
+          <caret line="95" column="43" lean-forward="false" selection-start-line="95" selection-start-column="43" selection-end-line="95" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/newProxy/src/MyLoggerUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="11" column="25" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1165#1166#0" expanded="true" />
+            <element signature="e#1223#1224#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HttpProxy/src/main/java/nioWithThreads/RunnableDoClientRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1475">
+          <caret line="68" column="34" lean-forward="false" selection-start-line="68" selection-start-column="34" selection-end-line="68" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/newProxy/classes.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/newProxy/顺序图.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/newProxy/src/TestUrl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="18" column="26" lean-forward="false" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/newProxy/src/ChannelPairs.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="48" column="57" lean-forward="false" selection-start-line="48" selection-start-column="57" selection-end-line="48" selection-end-column="57" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/newProxy/src/Acceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1787">
+          <caret line="78" column="33" lean-forward="false" selection-start-line="78" selection-start-column="33" selection-end-line="78" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1652#1653#0" expanded="true" />
+            <element signature="e#1693#1694#0" expanded="true" />
+            <element signature="e#1743#1744#0" expanded="true" />
+            <element signature="e#1781#1782#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/newProxy/src/Worker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/newProxy/src/Bootstrap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-413">
+          <caret line="13" column="24" lean-forward="false" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -522,10 +889,12 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
+          <last-edited>HttpProxy:jar</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
@@ -545,6 +914,7 @@
       </state>
       <state key="GlobalLibrariesConfigurable.UI">
         <settings>
+          <last-edited>Java EE 6-Java EE 6</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -556,7 +926,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>1.8</last-edited>
+          <last-edited>9.0</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -568,7 +938,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>HttpProxy</last-edited>
+          <last-edited>newProxy</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
