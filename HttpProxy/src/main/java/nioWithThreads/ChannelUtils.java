@@ -4,6 +4,7 @@ import nioWithThreads.model.Request;
 
 import java.io.IOException;
 import java.nio.ByteBuffer;
+import java.nio.channels.ClosedChannelException;
 import java.nio.channels.SocketChannel;
 import java.util.LinkedList;
 import java.util.List;
@@ -55,36 +56,46 @@ public class ChannelUtils {
         ByteBuffer byteBuffer=ByteBuffer.wrap(bytes);
         try {
             channel.write(byteBuffer);
-        } catch (IOException e) {
+        }catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    public static void closeChannels(SocketChannel socketChannel){
-        ProxyTools proxyTools=ProxyTools.getInstance();
-        Map<SocketChannel,SocketChannel> localRemoteChannels=proxyTools.getLocalRemoteChannelsMap();
-        Map<SocketChannel,SocketChannel> remoteLocalChannels=proxyTools.getRemoteLocalChannelsMap();
+//    public static void closeChannels(SocketChannel socketChannel){
+//        ProxyTools proxyTools=ProxyTools.getInstance();
+//        Map<SocketChannel,SocketChannel> localRemoteChannels=proxyTools.getLocalRemoteChannelsMap();
+//        Map<SocketChannel,SocketChannel> remoteLocalChannels=proxyTools.getRemoteLocalChannelsMap();
+//
+//        if(localRemoteChannels.get(socketChannel)!=null){
+//            SocketChannel theOtherSocketChannel=localRemoteChannels.get(socketChannel);
+//            try {
+//                socketChannel.close();
+//                theOtherSocketChannel.close();
+//                localRemoteChannels.remove(socketChannel);
+//                remoteLocalChannels.remove(theOtherSocketChannel);
+//            } catch (IOException e) {
+//                e.printStackTrace();
+//            }
+//        }else{
+//            SocketChannel theOtherSocketChannel=remoteLocalChannels.get(socketChannel);
+//            try {
+//                socketChannel.close();
+//                theOtherSocketChannel.close();
+//                localRemoteChannels.remove(theOtherSocketChannel);
+//                remoteLocalChannels.remove(socketChannel);
+//            } catch (IOException e) {
+//                e.printStackTrace();
+//            }
+//        }
+//    }
 
-        if(localRemoteChannels.get(socketChannel)!=null){
-            SocketChannel theOtherSocketChannel=localRemoteChannels.get(socketChannel);
-            try {
-                socketChannel.close();
-                theOtherSocketChannel.close();
-                localRemoteChannels.remove(socketChannel);
-                remoteLocalChannels.remove(theOtherSocketChannel);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }else{
-            SocketChannel theOtherSocketChannel=remoteLocalChannels.get(socketChannel);
-            try {
-                socketChannel.close();
-                theOtherSocketChannel.close();
-                localRemoteChannels.remove(theOtherSocketChannel);
-                remoteLocalChannels.remove(socketChannel);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+    public static void closeChannels(SocketChannel socketChannel){
+        try {
+            socketChannel.shutdownInput();
+            ProxyTools proxyTools=ProxyTools.getInstance();
+            proxyTools.addInputShutdownChannel(socketChannel);
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 }

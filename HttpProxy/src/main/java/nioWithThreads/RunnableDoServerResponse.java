@@ -27,14 +27,18 @@ public class RunnableDoServerResponse implements Runnable{
             }
 //            System.out.println("select的本地Channel个数："+localChannelSet.size());
             try {
-
+                int num=0;
                 for (SocketChannel remoteChannelCell:remoteChannels
                         ) {
-                    remoteChannelCell.register(selector, SelectionKey.OP_READ);
+                    if(!proxyTools.isInputShutdown(remoteChannelCell)){
+                        remoteChannelCell.register(selector, SelectionKey.OP_READ);
+                        num++;
+                    }
                 }
-
+//                System.out.println("select的远程Channel个数："+num);
+//
                 if((selector.select(500000))!=0){
-//                    System.out.println("有新请求");
+//                    System.out.println("有新响应");
                     Set selectedKeys=selector.selectedKeys();
                     Iterator iterator=selectedKeys.iterator();
                     while(iterator.hasNext()){
@@ -46,12 +50,12 @@ public class RunnableDoServerResponse implements Runnable{
                             SocketChannel localChannel=remoteLocalChannelsMap.get(remoteChannel);
                             //下面进行传输：
                             ChannelUtils.sendToChannel(localChannel,responseArray);
-                            System.out.println("传输完成");
 
 
 
                         }else{
                             //todo:考虑销毁这个已经关闭的连接
+//                            System.out.println("关闭远程"+remoteChannel);
                             ChannelUtils.closeChannels(remoteChannel);
                         }
                         iterator.remove();

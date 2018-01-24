@@ -4,8 +4,13 @@ import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.nio.channels.ServerSocketChannel;
 import java.nio.channels.SocketChannel;
+import java.util.Collections;
+import java.util.HashSet;
 import java.util.Map;
+import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ConcurrentSkipListSet;
+import java.util.concurrent.CopyOnWriteArraySet;
 
 /**
  * 负责存储相关的数据结构
@@ -15,6 +20,7 @@ public class ProxyTools {
     private ServerSocketChannel proxyServerSocketChannel;
     private Map<SocketChannel,SocketChannel> localRemoteChannelsMap=new ConcurrentHashMap<>();
     private Map<SocketChannel,SocketChannel> remoteLocalChannelsMap=new ConcurrentHashMap<>();
+    private ConcurrentSkipListSet inputShutdownChannelSet= new ConcurrentSkipListSet();
     private static volatile  ProxyTools proxyTools;
 
     //构造方法
@@ -26,6 +32,18 @@ public class ProxyTools {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public void addInputShutdownChannel(SocketChannel channel){
+        inputShutdownChannelSet.add(channel);
+    }
+
+    public void removeInputShutdownChannel(SocketChannel channel){
+        inputShutdownChannelSet.remove(channel);
+    }
+
+    public boolean isInputShutdown(SocketChannel socketChannel){
+        return inputShutdownChannelSet.contains(socketChannel);
     }
 
 

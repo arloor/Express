@@ -17,5 +17,9 @@ public class Main {
         Thread threadDoServerResponse=new Thread(runnableDoServerResponse);
         threadDoServerResponse.start();
 
+        RunnableDestroy runnableDestroy=new RunnableDestroy();
+        Thread threadDestroy=new Thread(runnableDestroy);
+        threadDestroy.start();
+
     }
 }

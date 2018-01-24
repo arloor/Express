@@ -32,12 +32,17 @@ public class RunnableDoClientRequest implements Runnable{
             if(localChannelSet.size()==0){//防止因为没有需要seclet的channel而阻塞
                 continue;
             }
-//            System.out.println("select的本地Channel个数："+localChannelSet.size());
+
             try {
+                int num=0;
                 for (SocketChannel localChannelCell:localChannelSet
                         ) {
-                    localChannelCell.register(selector, SelectionKey.OP_READ);
+                    if(!proxyTools.isInputShutdown(localChannelCell)) {
+                        localChannelCell.register(selector, SelectionKey.OP_READ);
+                        num++;
+                    }
                 }
+//                System.out.println("select的本地Channel个数："+num);
 
                 if((selector.select(500000))!=0){
 //                    System.out.println("有新请求");
